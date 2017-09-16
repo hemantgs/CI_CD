@@ -19,8 +19,10 @@ node {
    stages {
                     
         stage('Build binaries'){
-           checkout scm
+            checkout scm
+            steps{
               bat 'mvn clean install'
+            }
       }
    }
 }
