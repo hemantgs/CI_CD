@@ -16,5 +16,11 @@
 
 node {
     
-    echo "hello world"
+   stages {
+                    
+        stage('Build binaries'){
+           checkout scm
+              bat 'mvn clean install'
+      }
+   }
 }
